@@ -45,21 +45,7 @@
     "files": [
         "lib/**/*"
     ],
-    "scripts": {
-        "test": "npm run test:jest && npm run lint",
-        "test:jest": "jest",
-        "lint": "npm run lint:es && npm run lint:prettier",
-        "lint:es": "eslint src",
-        "lint:prettier": "npm run format:prettier:raw -- --check",
-        "format": "npm run format:es && npm run format:prettier",
-        "format:es": "npm run lint:es -- --fix",
-        "format:prettier": "npm run format:prettier:raw -- --write",
-        "format:prettier:raw": "prettier '**/*.{ts,md,json,yml}'",
-        "build": "npm run build:cjs && npm run build:esm",
-        "build:cjs": "tsc --sourceRoot https://raw.githubusercontent.com/fb55/htmlparser2/$(git rev-parse HEAD)/src/",
-        "build:esm": "npm run build:cjs -- --module esnext --target es2019 --outDir lib/esm && echo '{\"type\":\"module\"}' > lib/esm/package.json",
-        "prepare": "npm run build"
-    },
+    "scripts": {},
     "dependencies": {
         "domelementtype": "^2.3.0",
         "domhandler": "^5.0.3",
